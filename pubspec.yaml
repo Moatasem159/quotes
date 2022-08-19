@@ -1,0 +1,58 @@
+name: quotes
+description: application show random quotes
+
+
+publish_to: 'none' # Remove this line if you wish to publish to pub.dev
+
+version: 1.0.0+1
+
+environment:
+  sdk: ">=2.17.3 <3.0.0"
+dependencies:
+  flutter:
+    sdk: flutter
+  cupertino_icons: ^1.0.2
+  dartz: ^0.10.1
+  bloc: ^8.1.0
+  equatable: ^2.0.3
+  flutter_bloc: ^8.1.1
+  flutter_spinkit: ^5.1.0
+  get_it: ^7.2.0
+  http: ^0.13.5
+  dio: ^4.0.6
+  internet_connection_checker: ^0.0.1+4
+  shared_preferences: ^2.0.15
+  flutter_localizations:
+    sdk: flutter
+
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^2.0.0
+
+
+flutter:
+  uses-material-design: true
+  assets:
+     - assets/images/quote.png
+     - lang/ar.json
+     - lang/en.json
+  fonts:
+    - family: Tajawal
+      fonts:
+        - asset: assets/fonts/Tajawal/Tajawal-Black.ttf
+          weight: 900
+        - asset: assets/fonts/Tajawal/Tajawal-ExtraBold.ttf
+          weight: 800
+        - asset: assets/fonts/Tajawal/Tajawal-Bold.ttf
+          weight: 700
+        - asset: assets/fonts/Tajawal/Tajawal-Medium.ttf
+          weight: 500
+        - asset: assets/fonts/Tajawal/Tajawal-Regular.ttf
+          weight: 400
+        - asset: assets/fonts/Tajawal/Tajawal-Light.ttf
+          weight: 300
+        - asset: assets/fonts/Tajawal/Tajawal-ExtraLight.ttf
+          weight: 200
+
