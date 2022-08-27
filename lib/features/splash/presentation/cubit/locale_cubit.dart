@@ -17,7 +17,7 @@ class LocaleCubit extends Cubit<LocaleStates> {
   String currentLangCode=AppStrings.englishCode;
 
   Future <void> getSavedLang() async{
-    final response= await getSavedLangUseCase.call(NoParams());
+    final response= await getSavedLangUseCase.call(params: NoParams());
 
     response.fold((failure) => debugPrint("cache Failure"), (value){
       currentLangCode=value;
@@ -27,7 +27,7 @@ class LocaleCubit extends Cubit<LocaleStates> {
   }
 
   Future <void> _changeLang(String langCode) async{
-    final response= await changeLangUseCase.call(langCode);
+    final response= await changeLangUseCase.call(params: langCode);
 
     response.fold((failure) => debugPrint("cache Failure"), (value){
       currentLangCode=langCode;

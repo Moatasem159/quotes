@@ -9,15 +9,13 @@ import 'package:quotes/features/random_quote/domain/repositories/quote_repositor
 class GetRandomQuote implements UseCase<Quote,NoParams> {
 
 
-final QuoteRepository quoteRepository;
+   final QuoteRepository quoteRepository;
 
   GetRandomQuote({required this.quoteRepository});
-  // Future<Either<Failure,Quote>>? execute(){
-  //   return null;
-  // }
+
 
   @override
-  Future<Either<Failure, Quote>> call(NoParams params) {
+  Future<Either<Failure, Quote>> call({NoParams? params}) {
      return quoteRepository.getRandomQuote();
   }
 }
